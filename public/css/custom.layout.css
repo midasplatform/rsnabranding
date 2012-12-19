@@ -1,0 +1,24 @@
+div.Header div.HeaderLogo {
+  background: url('../images/QIBAMidasBanner.png') no-repeat 0% 0%;
+  height: 155px;
+  width: 285px;
+  float: left;
+  cursor: pointer;
+}
+
+div.Header {
+  background: white;
+  height: 155px;
+}
+
+div.Header div.HeaderContent {
+  height: 155px;
+}
+
+div.HeaderContent div.HeaderSearch {
+  padding-top: 66px;
+}
+
+div.HeaderContent div.HeaderAction {
+  padding-top: 66px;
+}
