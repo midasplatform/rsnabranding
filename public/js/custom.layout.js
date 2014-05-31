@@ -6,6 +6,7 @@
 $(document).ready(function () {
     'use strict';
     $('div.HeaderLogo').unbind('click').click(function () {
-        window.location = json.global.webroot + '/feed';
+        window.location = json.global.webroot + '/community';
     });
+
 });
