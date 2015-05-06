@@ -22,4 +22,12 @@ $(document).ready(function () {
     midas.registerCallback('CALLBACK_CORE_RESOURCE_HIGHLIGHTED',
                            'rsnabranding', hideDownloadsForAnon);
 
+    $('.uploadFile')
+        .empty()
+        .unbind()
+        .html("<div style=\"color: white; font-size: 14pt; padding-top: 2px;\">Request Upload</div>")
+        .click(function() {
+            window.location = "https://www.rsna.org/QIDW-Contributor-Request/";
+        });
+
 });
