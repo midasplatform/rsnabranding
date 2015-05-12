@@ -22,7 +22,7 @@ $(document).ready(function () {
     midas.registerCallback('CALLBACK_CORE_RESOURCE_HIGHLIGHTED',
                            'rsnabranding', hideDownloadsForAnon);
 
-    $('.uploadFile')
+    $('.uploadFile-top')
         .empty()
         .unbind()
         .html("<div style=\"color: white; font-size: 14pt; padding-top: 2px;\">Request Upload</div>")
