@@ -18,8 +18,21 @@
  limitations under the License.
 =========================================================================*/
 
-/** Generic controller class for the rsnabranding module. */
-class RSNABranding_AppController extends MIDAS_GlobalModule
-{
-    public $moduleName = 'rsnabranding';
-}
+$finder = Symfony\CS\Finder\DefaultFinder::create()
+    ->in(__DIR__);
+
+$config = Symfony\CS\Config\Config::create()
+    ->level(Symfony\CS\FixerInterface::SYMFONY_LEVEL)
+    ->fixers(array(
+        '-psr0',
+        '-blankline_after_open_tag',
+        '-phpdoc_no_empty_return',
+        '-phpdoc_params',
+        '-phpdoc_separation',
+        '-phpdoc_to_comment',
+        '-phpdoc_var_without_name',
+    ))
+    ->finder($finder)
+    ->setUsingCache(true);
+
+return $config;

@@ -18,8 +18,8 @@
  limitations under the License.
 =========================================================================*/
 
-/** Generic controller class for the rsnabranding module. */
-class RSNABranding_AppController extends MIDAS_GlobalModule
+/** Bootstrap for the rsnabranding module. */
+class RSNABranding_Bootstrap extends Zend_Application_Module_Bootstrap
 {
     public $moduleName = 'rsnabranding';
 }
