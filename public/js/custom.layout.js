@@ -19,6 +19,7 @@ $(document).ready(function () {
     midas.registerCallback('CALLBACK_CORE_RESOURCE_HIGHLIGHTED',
         'rsnabranding', hideDownloadsForAnon);
 
+    // Change upload button to "Request Upload"
     $('.uploadFile-top')
         .empty()
         .unbind()
@@ -28,4 +29,9 @@ $(document).ready(function () {
                 window.location = "https://www.rsna.org/QIDW-Contributor-Request/";
             }
         });
+
+    // Hide the users and feed links
+    $('#menuUsers').hide();
+    $('#menuFeed').hide();
+
 });
