@@ -34,4 +34,7 @@ $(document).ready(function () {
     $('#menuUsers').hide();
     $('#menuFeed').hide();
 
+    // Hide user deletion for non admins
+    $('#userDeleteActionNonAdmin').hide();
+
 });
