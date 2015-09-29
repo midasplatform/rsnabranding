@@ -1,0 +1,64 @@
+/* Midas Server. Copyright Kitware SAS. Licensed under the Apache License 2.0. */
+div.Header div.HeaderLogo {
+  background: url("../images/QIBAMidasBanner.png") no-repeat 0% 0%;
+  height: 155px;
+  width: 285px;
+  float: left;
+  cursor: pointer; }
+
+div.Header {
+  background: white;
+  height: 155px; }
+
+div.Header div.HeaderContent {
+  height: 155px; }
+
+div.HeaderContent div.HeaderSearch {
+  padding-top: 66px; }
+
+div.HeaderContent div.HeaderAction {
+  padding-top: 66px; }
+
+.licenseSelectMessage {
+  display: none; }
+
+.additionalMessage {
+  display: none; }
+
+div.HeaderAction ul li.uploadFile-top {
+  margin-left: -30px; }
+
+div.HeaderAction ul li.rsnaloginButton {
+  padding-top: 2px;
+  margin-left: 10px;
+  background-color: #578DBB;
+  background-image: -webkit-linear-gradient(top, #578DBB, #325372);
+  background-image: linear-gradient(to bottom,#578DBB, #325372); }
+  div.HeaderAction ul li.rsnaloginButton:hover {
+    background-color: #5B7AD2;
+    background-image: -webkit-linear-gradient(top, #5B7AD2, #42779D);
+    background-image: linear-gradient(to bottom,#5B7AD2, #42779D); }
+  div.HeaderAction ul li.rsnaloginButton a {
+    font-size: 14pt;
+    font-weight: normal; }
+
+.loginPage {
+  padding: 10px; }
+
+#rsnaLoginForm td {
+  padding-right: 20px; }
+#rsnaLoginForm input#email {
+  width: 300px; }
+#rsnaLoginForm input#password {
+  width: 300px; }
+
+#rsnaRegisterForm {
+  width: 700px;
+  padding: 20px; }
+  #rsnaRegisterForm input, #rsnaRegisterForm label {
+    margin-top: 5px;
+    margin-bottom: 5px; }
+  #rsnaRegisterForm span.rsnaErrorSpan {
+    padding-left: 10px; }
+
+/*# sourceMappingURL=custom.css.map */

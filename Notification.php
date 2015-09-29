@@ -30,16 +30,15 @@ class RSNABranding_Notification extends MIDAS_Notification
     {
         $this->addCallBack('CALLBACK_CORE_GET_FOOTER_HEADER', 'getHeader');
         $this->addCallBack('CALLBACK_CORE_GET_FOOTER_LAYOUT', 'getJs');
+        $this->addCallBack('CALLBACK_CORE_LAYOUT_TOPBUTTONS', 'getButton');
     }
 
     /** Return HTML link and script tags. */
     public function getHeader()
     {
         $baseUrl = Zend_Controller_Front::getInstance()->getBaseUrl();
-        $cssPath = $baseUrl.'/modules/'.$this->moduleName.'/public/css/custom.layout.css';
-        $jsPath = $baseUrl.'/modules/'.$this->moduleName.'/public/js/custom.layout.js';
+        $cssPath = $baseUrl.'/modules/'.$this->moduleName.'/public/css/custom.css';
         $cssHtml = '<link type="text/css" rel="stylesheet" href="'.$cssPath.'">';
-        $jsHtml = '<script src="'.$jsPath.'"></script>';
 
         return $cssHtml;
     }
@@ -52,5 +51,22 @@ class RSNABranding_Notification extends MIDAS_Notification
         $jsHtml = '<script src="'.$jsPath.'"></script>';
 
         return $jsHtml;
+    }
+
+    /** Return HTML for rendering an additional button for login/register. */
+    public function getButton()
+    {
+        $baseUrl = Zend_Controller_Front::getInstance()->getBaseUrl();
+        $html = '';
+        if($this->userSession->Dao) {
+            $html = '<li class="rsnaloginButton" title="Logout">'.
+                '<a href="'.$baseUrl.'/user/logout">Logout</a></li>';
+        } else {
+            $html = '<li class="rsnaloginButton" title="Login">'.
+                '<a href="'.$baseUrl.'/rsnabranding/auth/login">Login</a></li>'.
+                '<li class="rsnaloginButton" title="Register">'.
+                '<a href="'.$baseUrl.'/rsnabranding/auth/register">Register</a></li>';
+        }
+        return $html;
     }
 }

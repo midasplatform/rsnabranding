@@ -1,0 +1,84 @@
+<?php
+/*=========================================================================
+ Midas Server
+ Copyright Kitware SAS, 26 rue Louis Guérin, 69100 Villeurbanne, France.
+ All rights reserved.
+ For more information visit http://www.kitware.com/.
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0.txt
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+=========================================================================*/
+?>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link href="<?php echo $this->coreWebroot ?>/public/css/user/user.register.css" rel="stylesheet" type="text/css"/>
+    <div class="rsnaRegisterContent">
+        <div class="rsnaRegister">
+            <form id="rsnaRegisterForm" class="genericForm" method="<?php echo $this->form['method'] ?>"
+                  action="<?php echo $this->form['action'] ?>">
+                <div class="rsnaRegisterError">
+                    <span></span><br/>
+                </div>
+                <div>
+                    <label for="email"><?php echo $this->t("Email") ?></label>
+                    <?php echo $this->form['email'] ?>
+                </div>
+                <div>
+                    <label for="firstname"><?php echo $this->t("First Name") ?></label>
+                    <?php echo $this->form['firstname'] ?>
+                </div>
+                <div>
+                    <label for="lastname"><?php echo $this->t("Last Name") ?></label>
+                    <?php echo $this->form['lastname'] ?>
+                </div>
+                <div>
+                    <label for="password1"><?php echo $this->t("Password") ?></label>
+                    <?php echo $this->form['password1'] ?>
+                </div>
+                <div>
+                    <label for="password2"><?php echo $this->t("Confirm Password") ?></label>
+                    <?php echo $this->form['password2'] ?>
+                </div>
+                <div>
+                    <label for="affiliation">Affiliation</label>
+                    <?php echo $this->form['affiliation'] ?>
+                </div>
+                <div>
+                    <label for="role">Role</label>
+                    <?php echo $this->form['role'] ?>
+                </div>
+                <div>
+                    <?php echo $this->form['other'] ?>
+                </div>
+                <div id="conditionsBlock">
+                    <label for="conditions"></label>
+                    <?php echo $this->t("I read and accepted the") ?>
+                    <a class='termOfService' href='#'><?php echo $this->t(
+                            'terms of service'
+                        ) ?></a><?php echo $this->form['conditions'] ?>
+                </div>
+                <div>
+                    <?php echo $this->form['submit'] ?>
+                    <img style="display: none;" alt=""
+                         src="<?php echo $this->coreWebroot; ?>/public/images/icons/loading.gif" id="registerWaiting"/>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="jsonRegister" style="display:none;">
+        <?php echo $this->jsonRegister ?>
+    </div>
+
+<?php
+$this->headScript()->appendFile($this->coreWebroot.'/public/js/jquery/jquery.form.js');
+$this->headScript()->appendFile($this->moduleWebroot.'/public/js/register.js');

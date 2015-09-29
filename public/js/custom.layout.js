@@ -37,4 +37,9 @@ $(document).ready(function () {
     // Hide user deletion for non admins
     $('#userDeleteActionNonAdmin').hide();
 
+
+    // Hide login and register links at the top corner
+    $('.loginLink').hide();
+    $('.registerLink').hide();
+
 });
